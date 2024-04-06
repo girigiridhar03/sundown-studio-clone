@@ -13,6 +13,8 @@ const bigBoxPara = document.querySelector(".big-box-para");
 const menu = document.querySelector(".menu");
 const fullScreen = document.querySelector("#full-screen");
 const navImage = document.querySelector(".nav-image");
+const loader = document.querySelector("#loader");
+
 let flag = 0;
 elemContainer.addEventListener("mouseenter",()=>{
     fixedImage.style.display = "block"
@@ -76,3 +78,7 @@ var swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
     spaceBetween: 100,
   });
+
+  setTimeout(() => {
+    loader.style.top = "-100%"
+  }, 4000);
